@@ -5,19 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUIproject"
         mc:Ignorable="d"
-        Title="JsonDB" Height="425" Width="850">
-    <Grid>
-        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="240" FontSize="20" Text="Wprowadź ścieżkę do pliku" Margin="25,30,0,0"/>
-        
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="25,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Grid.ColumnSpan="2"/>
-        <Button Content="Submit" HorizontalAlignment="Left" Margin="290,80,0,0" VerticalAlignment="Top" Height="25" Width="80" Grid.Column="1" Click="Button_Click"/>
-        
-        <Button Content="Zapytanie 1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="240" Height="25" Margin="25,130,0,0"/>
-        <Button Content="Zapytanie 2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="240" Height="25" Margin="25,180,0,0"/>
-        <Button Content="Zapytanie 3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="240" Height="25" Margin="25,230,0,0"/>
-        <Button Content="Zapytanie 4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="240" Height="25" Margin="25,280,0,0"/>
-        <Button Content="Zapytanie 5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="240" Height="25" Margin="25,330,0,0"/>
+        Title="JsonDB" Height="475" Width="850">
+    <Grid Background="#EEE">
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="240" FontSize="20" Text="Gazeta" Margin="25,30,0,0"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="290,30,0,0" VerticalAlignment="Top" Height="25" Width="80" Grid.Column="1" Click="Add_Click"/>
 
-        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Height="330" Width="400" Margin="400, 30, 0, 0"/>
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="25,80,0,0" TextWrapping="Wrap" Text="Wprowadź ścieżkę do pliku..." Name="FilePathBox" VerticalAlignment="Top" Width="240" Grid.ColumnSpan="2"/>
+        <Button Content="Szukaj" HorizontalAlignment="Left" Margin="290,80,0,0" VerticalAlignment="Top" Height="25" Width="80" Grid.Column="1" Click="Browse_Click"/>
+
+        <Button Content="Który redaktor napisał najwięcej artykułów?" HorizontalAlignment="Left" VerticalAlignment="Top" Width="345" Height="25" Margin="25,130,0,0" Click="Button1_Click"/>
+        <Button Content="Sortuj artykuły według ocen." HorizontalAlignment="Left" VerticalAlignment="Top" Width="345" Height="25" Margin="25,180,0,0" Click="Button2_Click"/>
+        <Button Content="Sortuj artykuły według daty." HorizontalAlignment="Left" VerticalAlignment="Top" Width="345" Height="25" Margin="25,230,0,0" Click="Button3_Click"/>
+        <Button Content="Czyje artykuły zyskiwały najwyższą średnią ocen?" HorizontalAlignment="Left" VerticalAlignment="Top" Width="345" Height="25" Margin="25,280,0,0" Click="Button4_Click"/>
+        <Button Content="Kto uzyskał największą łączną ilość wyświetleń artykułów?" HorizontalAlignment="Left" VerticalAlignment="Top" Width="345" Height="25" Margin="25,330,0,0" Click="Button5_Click"/>
+
+        <Button Content="Wyswietl dane" HorizontalAlignment="Left" Margin="25,0,0,34" VerticalAlignment="Bottom" Height="25" Width="160" Click="Reset_Click"/>
+        <Button Content="Wyczyść" HorizontalAlignment="Left" Margin="210,0,0,34" VerticalAlignment="Bottom" Height="25" Width="160" Click="Clear_Click"/>
+
+        <ListBox Name="content" HorizontalAlignment="Left" VerticalAlignment="Top" Height="380" Width="400" Margin="400, 30, 0, 0">
+            <ListBox.Background>
+                <SolidColorBrush Opacity="0.6"/>
+            </ListBox.Background>
+        </ListBox>
+
+        <TextBlock Width="110" Height="12" FontSize="10" Margin="0,0" VerticalAlignment="Bottom" HorizontalAlignment="Right">©Mikołaj Marcińczak 3e</TextBlock>
     </Grid>
 </Window>

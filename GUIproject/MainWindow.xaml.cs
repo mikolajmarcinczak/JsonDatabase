@@ -21,16 +21,74 @@ namespace GUIproject
 { 
     public partial class MainWindow : Window
     {
+        public string filename;
+        public List<Gazeta> lista = new List<Gazeta>();
+        public Gazeta gazeta = new Gazeta();
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
-        protected void Button_Click(object sender, RoutedEventArgs e)
+        protected void Browse_Click(object sender, RoutedEventArgs e)
         {
-            //No
+            Microsoft.Win32.OpenFileDialog open = new Microsoft.Win32.OpenFileDialog();
+            bool? res = open.ShowDialog();
+            if (res == true)
+            {
+                filename = open.FileName;
+                content.Items.Clear();
+                FilePathBox.Text = open.FileName;
+                Deserialize(open.FileName, lista, gazeta);
+            }
         }
-        public static void Deserialize(string filename, List<Gazeta> lista, Gazeta gazeta) //"Unpack" the JSON items to a List of objects and display them
+
+        protected void Add_Click(object sender, RoutedEventArgs e)
+        {
+            Okno2 okno2 = new Okno2();
+            okno2.Show();
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            content.Items.Clear();
+            MostArticles(lista);
+        }
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            content.Items.Clear();
+            SortByRating(lista);
+        }
+        private void Button3_Click(object sender, RoutedEventArgs e)
+        {
+            content.Items.Clear();
+            SortByDate(lista);
+        }
+        private void Button4_Click(object sender, RoutedEventArgs e)
+        {
+            content.Items.Clear();
+            HighestRating(lista);
+        }
+        private void Button5_Click(object sender, RoutedEventArgs e)
+        {
+            content.Items.Clear();
+            HighestCombinedViews(lista);
+        }
+
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+            content.Items.Clear();
+            if(File.Exists(FilePathBox.Text))
+            {
+                Deserialize(FilePathBox.Text, lista, gazeta);
+            }
+            else MessageBox.Show("File Not found!");
+        }
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            content.Items.Clear();
+        }
+
+        public void Deserialize(string filename, List<Gazeta> lista, Gazeta gazeta) //"Unpack" the JSON items to a List of objects and display them
         {
             using (StreamReader r = new StreamReader(filename))
             {
@@ -44,12 +102,12 @@ namespace GUIproject
 
                     lista.Add(new Gazeta { redaktorzy = gazeta.redaktorzy, artykuly = gazeta.artykuly });
 
-                    Console.WriteLine("\nid artykulu: {0} \ndata: {1} \noceny: {2} \nwyswietlenia: {3} \nid: {4} \nimie: {5} \nnazwisko: {6}", lista[i].artykuly.id, lista[i].artykuly.data.ToString("dd/MM/yyyy"), lista[i].artykuly.stats.oceny, lista[i].artykuly.stats.wyswietlenia, lista[i].redaktorzy.id, lista[i].redaktorzy.dane.imie, lista[i].redaktorzy.dane.nazwisko);
+                    content.Items.Add("\nid artykulu: " +  lista[i].artykuly.id + "\ndata: " + lista[i].artykuly.data.ToString("dd/MM/yyyy") + "\noceny: " +  lista[i].artykuly.stats.oceny+ "\nwyswietlenia: " + lista[i].artykuly.stats.wyswietlenia + "\nid: " + lista[i].redaktorzy.id + "\nimie: " + lista[i].redaktorzy.dane.imie + "\nnazwisko: " + lista[i].redaktorzy.dane.nazwisko);
                     i++;
                 }
             }
         }
-        public static void MostArticles(List<Gazeta> lista) //Which author wrote the most articles?
+        public void MostArticles(List<Gazeta> lista) //Which author wrote the most articles?
         {
             var temp = new Dictionary<string, int>();
 
@@ -75,14 +133,14 @@ namespace GUIproject
                     max = item;
             }
 
-            Console.WriteLine("\nNajwiecej artykulow napisal : {0}, az {1}", max.Key, max.Value);
+            content.Items.Add("\nNajwiecej artykulow napisal: " + max.Key + ", az " + max.Value);
 
             //foreach (var item in sorted)
             //{
             //    Console.WriteLine("Autor " + item.Key + " napisal " + item.Value + " artykulow");
             //}
         }
-        public static void SortByRating(List<Gazeta> lista) //Dispay articles sorted by rating
+        public void SortByRating(List<Gazeta> lista) //Dispay articles sorted by rating
         {
             var temp = new Dictionary<int, double>();
 
@@ -98,10 +156,10 @@ namespace GUIproject
             Console.WriteLine();
             foreach (var item in sorted)
             {
-                Console.WriteLine("Artykul o id: " + item.Key + ", ocena: " + item.Value);
+                content.Items.Add("Artykul o id: " + item.Key + ", ocena: " + item.Value);
             }
         }
-        public static void SortByDate(List<Gazeta> lista) //Display articles sorted by views
+        public void SortByDate(List<Gazeta> lista) //Display articles sorted by views
         {
             var temp = new Dictionary<int, DateTime>();
 
@@ -115,10 +173,10 @@ namespace GUIproject
             Console.WriteLine();
             foreach (var item in sorted)
             {
-                Console.WriteLine("Artykul o id: " + item.Key + ", data: " + item.Value.ToString("dd/MM/yyyy"));
+                content.Items.Add("Artykul o id: " + item.Key + ", data: " + item.Value.ToString("dd/MM/yyyy"));
             }
         }
-        public static void HighestRating(List<Gazeta> lista) //Whose articles got the highest average rating?
+        public void HighestRating(List<Gazeta> lista) //Whose articles got the highest average rating?
         {
             var cache = new Dictionary<string, double>();
             var occ = new Dictionary<string, int>();
@@ -154,14 +212,14 @@ namespace GUIproject
                     max = item;
             }
 
-            Console.WriteLine("\nAutor " + max.Key + " uzyskal srednia ocen: " + max.Value.ToString("0.###"));
+            content.Items.Add("\nAutor " + max.Key + " uzyskal srednia ocen: " + max.Value.ToString("0.###"));
 
             //foreach (var item in cache)
             //{
             //    Console.WriteLine("Autor " + item.Key + " uzyskal srednia ocen: " + item.Value);
             //}
         }
-        public static void HighestCombinedViews(List<Gazeta> lista) //Which author got the highest combined views number?
+        public void HighestCombinedViews(List<Gazeta> lista) //Which author got the highest combined views number?
         {
             var cache = new Dictionary<string, int>();
 
@@ -181,8 +239,8 @@ namespace GUIproject
 
             foreach (var item in cache)
             {
-                Console.WriteLine("Artykuly autora " + item.Key + " uzyskaly lacznie " + item.Value + " wyswietlen.");
+                content.Items.Add("Artykuly autora " + item.Key + " uzyskaly lacznie " + item.Value + " wyswietlen.");
             }
-        }
+        }       
     }
 }

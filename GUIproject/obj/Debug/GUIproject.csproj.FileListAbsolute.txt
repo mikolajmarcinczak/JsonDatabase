@@ -16,3 +16,27 @@ C:\Users\mikol\Desktop\si szarp\json OPs\Nowy folder\GUIproject\GUIproject\obj\D
 C:\Users\mikol\Desktop\si szarp\json OPs\Nowy folder\GUIproject\GUIproject\obj\Debug\GUIproject.csproj.CopyComplete
 C:\Users\mikol\Desktop\si szarp\json OPs\Nowy folder\GUIproject\GUIproject\obj\Debug\GUIproject.exe
 C:\Users\mikol\Desktop\si szarp\json OPs\Nowy folder\GUIproject\GUIproject\obj\Debug\GUIproject.pdb
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\bin\Debug\GUIproject.exe.config
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\bin\Debug\GUIproject.exe
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\bin\Debug\GUIproject.pdb
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\GUIproject.csprojAssemblyReference.cache
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\MainWindow.g.cs
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\App.g.cs
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\GUIproject_MarkupCompile.cache
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\GUIproject_MarkupCompile.lref
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\MainWindow.baml
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\GUIproject.g.resources
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\GUIproject.Properties.Resources.resources
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\GUIproject.csproj.GenerateResource.cache
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\GUIproject.csproj.CoreCompileInputs.cache
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\GUIproject.csproj.CopyComplete
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\GUIproject.exe
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\GUIproject.pdb
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\Okno2.g.cs
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\Okno2.baml
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\bin\Debug\GUIproject.exe.manifest
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\bin\Debug\GUIproject.application
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\GUIproject.exe.manifest
+C:\Users\mikol\Desktop\myshit\infa\3 klasa\projekt bazodanowy\JsonGUI\JsonDatabase\GUIproject\obj\Debug\GUIproject.application
