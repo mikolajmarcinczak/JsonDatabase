@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUIproject"
         mc:Ignorable="d"
-        Title="Okno2" Height="300" Width="460">
+        Title="Dodaj" Height="300" Width="460">
     <Grid Background="#EEE">
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="25,10,0,0" FontSize="14" TextWrapping="Wrap" Text="Identyfikator Artykułu" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="180,10,0,0" TextWrapping="Wrap" Text="" Name="ArtIDBox" VerticalAlignment="Top" Width="240"/>

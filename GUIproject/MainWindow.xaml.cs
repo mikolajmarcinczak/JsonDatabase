@@ -86,6 +86,7 @@ namespace GUIproject
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
             content.Items.Clear();
+            lista.Clear();
         }
 
         public void Deserialize(string filename, List<Gazeta> lista, Gazeta gazeta) //"Unpack" the JSON items to a List of objects and display them
@@ -139,6 +140,8 @@ namespace GUIproject
             //{
             //    Console.WriteLine("Autor " + item.Key + " napisal " + item.Value + " artykulow");
             //}
+
+            temp.Clear();
         }
         public void SortByRating(List<Gazeta> lista) //Dispay articles sorted by rating
         {
@@ -158,6 +161,8 @@ namespace GUIproject
             {
                 content.Items.Add("Artykul o id: " + item.Key + ", ocena: " + item.Value);
             }
+
+            temp.Clear();
         }
         public void SortByDate(List<Gazeta> lista) //Display articles sorted by views
         {
@@ -175,6 +180,8 @@ namespace GUIproject
             {
                 content.Items.Add("Artykul o id: " + item.Key + ", data: " + item.Value.ToString("dd/MM/yyyy"));
             }
+
+            temp.Clear();
         }
         public void HighestRating(List<Gazeta> lista) //Whose articles got the highest average rating?
         {
@@ -218,6 +225,8 @@ namespace GUIproject
             //{
             //    Console.WriteLine("Autor " + item.Key + " uzyskal srednia ocen: " + item.Value);
             //}
+
+            cache.Clear();
         }
         public void HighestCombinedViews(List<Gazeta> lista) //Which author got the highest combined views number?
         {
@@ -241,6 +250,8 @@ namespace GUIproject
             {
                 content.Items.Add("Artykuly autora " + item.Key + " uzyskaly lacznie " + item.Value + " wyswietlen.");
             }
+
+            cache.Clear();
         }       
     }
 }
